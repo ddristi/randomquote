@@ -1,12 +1,12 @@
-const express = require('express');
-const cors = require('cors');
-const fetch = require('node-fetch').default;
+import express from 'express';
+import cors from 'cors';
+import fetch from 'node-fetch';
 
 
 const app = express();
 app.use(cors());
 
-app.get('/quotes',async (req, res) => {
+app.get('/quotes', async(req, res) => {
     try {
       const response = await fetch('https://zenquotes.io/api/random');
   
